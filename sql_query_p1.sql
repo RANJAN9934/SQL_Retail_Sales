@@ -105,7 +105,8 @@ SELECT DISTINCT category FROM retail_sales;
 select * from retail_sales
 where sale_date = '2022-11-05'
 
--- Q.2 Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 4 in the month of Nov-2022
+-- Q.2 Write a SQL query to retrieve all transactions where the category is 'Clothing' and 
+	the quantity sold is more than 4 in the month of Nov-2022
 select 
 * 
 from retail_sales 
@@ -178,7 +179,8 @@ count(distinct customer_id) as cnt_unique_id
 from retail_sales
 group by category;
 
--- Q.10 Write a SQL query to create each shift and number of orders (Example Morning <=12, Afternoon Between 12 & 17, Evening >17)
+-- Q.10 Write a SQL query to create each shift and number of orders 
+(Example Morning <=12, Afternoon Between 12 & 17, Evening >17)
 
 with  hourly_sale as
 (
@@ -194,3 +196,4 @@ shift,
 count(*) as hourly_orders
 from hourly_sale
 group by shift
+
